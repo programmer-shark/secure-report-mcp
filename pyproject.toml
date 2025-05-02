@@ -1,0 +1,19 @@
+[project]
+name = "secure-report-mcp"
+version = "0.1.0"
+description = "A FastMCP server to generate password-protected PDF reports from text"
+authors = [{ name = "Rajesh Polavarapu", email = "rajeshp.1997@gmail.com" }]
+requires-python = ">=3.10"
+
+dependencies = [
+    "mcp[cli]>=1.6.0",
+    "fpdf>=1.7",
+    "pikepdf>=9.0.0",
+]
+
+[project.scripts]
+secure-report-mcp = "mcp_server:main"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
